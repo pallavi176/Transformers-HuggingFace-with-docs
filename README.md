@@ -17,3 +17,5 @@ mkdocs new .
 ```bash
 mkdocs serve
 ```
+
+https://squidfunk.github.io/mkdocs-material/creating-your-site/
