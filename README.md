@@ -13,3 +13,6 @@ bash init_setup.sh
 mkdocs new .
 ```
 
+```bash
+mkdocs serve
+```
