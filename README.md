@@ -13,6 +13,7 @@ bash init_setup.sh
 mkdocs new .
 ```
 
+### STEP 03- Run mkdocs server
 ```bash
 mkdocs serve
 ```
