@@ -1,17 +1,29 @@
-# Welcome to MkDocs
+# Transformers-HuggingFace-with-docs
+Transformers-HuggingFace-with-docs
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+## STEPS -
 
-## Commands
+### STEP 01- Create a repository by using template repository
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+### STEP 02- Clone the new repository
 
-## Project layout
+### STEP 03- Create a conda environment after opening the repository in VSCODE
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+```bash
+conda create --prefix ./env python=3.8 -y
+```
+
+```bash
+conda activate ./env
+```
+OR
+```bash
+source activate ./env
+```
+
+### STEP 04- install the requirements
+```bash
+pip install -r requirements.txt
+```
+
+### STEP 05- commit and push the changes to the remote repository
