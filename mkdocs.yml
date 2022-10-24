@@ -4,7 +4,8 @@ site_name: Transformers-HuggingFace-with-docs
 # define TOC or order of website-
 nav:
   - Home: index.md
-  - Introduction: 1transformer-intro.md
+  - Introduction: 0transformer-intro.md
+  - Pipeline: 1tranformer-pipeline.md
 
 site_author: Pallavi Saxena
 site_description: >-
