@@ -4,6 +4,6 @@
 
     - It includes steps:
 
-      * Pre-Processing
-      * Model
-      * Post-Processing
+        * Pre-Processing
+        * Model
+        * Post-Processing

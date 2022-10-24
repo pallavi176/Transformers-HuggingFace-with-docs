@@ -1,4 +1,6 @@
+pandas
 mkdocs-material
+tensorflow
 datasets
 evaluate
 transformers[sentencepiece]
