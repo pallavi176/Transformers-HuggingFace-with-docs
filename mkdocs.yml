@@ -23,6 +23,7 @@ theme:
     - navigation.sections
     - toc.integrate
     - navigation.top
+    - content.tooltips
   language: en
   palette:
     - scheme: default
