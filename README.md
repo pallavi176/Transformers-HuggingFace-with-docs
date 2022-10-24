@@ -19,3 +19,7 @@ mkdocs serve
 ```
 
 https://squidfunk.github.io/mkdocs-material/creating-your-site/
+
+```bash
+pip install ipykernel
+```
