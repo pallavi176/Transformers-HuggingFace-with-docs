@@ -6,6 +6,7 @@ nav:
   - Home: index.md
   - Introduction: 0transformer-intro.md
   - Pipeline: 1tranformer-pipeline.md
+  - UsingTransformer: 2UsingTransformers.md
 
 site_author: Pallavi Saxena
 site_description: >-
