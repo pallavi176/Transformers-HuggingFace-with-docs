@@ -9,6 +9,7 @@ nav:
   - UsingTransformer: 
     - 2UsingTransformers.md
     - Models: 2_2Models.md
+    - Tokenizers: 2_3Tokenizers.md
 
 site_author: Pallavi Saxena
 site_description: >-
