@@ -6,7 +6,8 @@ nav:
   - Home: index.md
   - Introduction: 0transformer-intro.md
   - Pipeline: 1tranformer-pipeline.md
-  - UsingTransformer: 2UsingTransformers.md
+  - UsingTransformer: 
+    - 2UsingTransformers.md
     - Models: 2_2Models.md
 
 site_author: Pallavi Saxena
@@ -23,6 +24,8 @@ theme:
   features:
     - navigation.tabs
     - navigation.sections
+    - navigation.expand
+    - navigation.indexes 
     - toc.integrate
     - navigation.top
     - content.tooltips
