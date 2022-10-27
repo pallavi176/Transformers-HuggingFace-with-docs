@@ -71,8 +71,84 @@ print(inputs)
     3. Special tokens: [[CLS],let,',s, try, to, token, ##ize,!,[SEP]]
     4. Input IDs: [101, 2292, 1005, 1055, 3046, 2000, 19204, 4697, 999, 102]
 
+- The first step of the pipeline is to split the text into tokens.
 
+``` py
+from transformers import AutoTokenizer
+tokenizer = AutoTokenizer.from_pretrained("bert-base-cased")
+sequence = "Let's try to tokenize!"
+tokens = tokenizer.tokenize(sequence)
+print(tokens)
+#[let, ', s, try, to, token, ##ize, !]
+```
 
+- Albert tokenize will add a long underscore in front of all the tokens that added space before them which is a convention shared by all sentence-based tokenizers
 
+``` py
+from transformers import AutoTokenizer
+tokenizer = AutoTokenizer.from_pretrained("albert-base-v1")
+sequence = "Let's try to tokenize!"
+tokens = tokenizer.tokenize(sequence)
+print(tokens)
+#[_let, ', s, _try, _to, _to, ken, ize, !]
+```
 
+- The second step of the tokenization pipeline is to map those tokens to their respective ids as defined by the vocabulary of the tokenizer.
+- This is why we need to download the file when we instantiate a tokenizer with from_pretrained() method. We have to make sure we use the same mapping as when the model was pretrained. To do this, we use convert_tokens_to_ids() method:
+
+``` py
+from transformers import AutoTokenizer
+tokenizer = AutoTokenizer.from_pretrained("bert-base-cased")
+sequence = "Let's try to tokenize!"
+tokens = tokenizer.tokenize(sequence)
+input_ids = tokenizer.convert_tokens_to_ids(tokens)
+print(input_ids)
+#[2292, 1005, 1055, 3046, 2000, 19204, 4697, 999]
+```
+
+- Lastly, the tokenizer adds special tokens the model expects by prepare_for_model() method:
+
+``` py
+final_inputs = tokenizer.prepare_for_model(input_ids)
+print(final_inputs)
+#[101, 2292, 1005, 1055, 3046, 2000, 19204, 4697, 999, 102]
+```
+
+## Decoding
+- The decode method allows us to check how the final output of the tokenizer translates back into text.
+
+``` py
+from transformers import AutoTokenizer
+tokenizer = AutoTokenizer.from_pretrained("bert-base-cased")
+sequence = "Let's try to tokenize!"
+inputs = tokenizer(sequence)
+decoded_string = tokenizer.decode(inputs["input_ids"])
+print(decoded_string)
+# "[CLS] let's try to tokenize! [SEP]"
+```
+
+- Roberta tokenizers uses special tokens as : <s> & </s>
+
+``` py
+from transformers import AutoTokenizer
+tokenizer = AutoTokenizer.from_pretrained("roberta")
+sequence = "Let's try to tokenize!"
+inputs = tokenizer(sequence)
+decoded_string = tokenizer.decode(inputs["input_ids"])
+print(decoded_string)
+# "<s> let's try to tokenize! </s>"
+```
+
+- Hence, a tokenizer takes texts as inputs and outputs numbers the associated model can make sense of.
+
+``` py
+from transformers import AutoTokenizer
+tokenizer = AutoTokenizer.from_pretrained("bert-base-cased")
+sequence = "Let's try to tokenize!"
+inputs = tokenizer(sequence)
+print(inputs)
+# {'input_ids': [101, 2292, 1005, 1055, 3046, 2000, 19204, 4697, 999, 102],
+# 'token_type_ids': [0, 0, 0, 0, 0, 0, 0, 0, 0],
+# 'attention_mask': [1, 1, 1, 1, 1, 1, 1, 1, 1]}
+```
 
