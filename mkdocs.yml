@@ -7,6 +7,7 @@ nav:
   - Introduction: 0transformer-intro.md
   - Pipeline: 1tranformer-pipeline.md
   - UsingTransformer: 2UsingTransformers.md
+    - Models: 2_2Models.md
 
 site_author: Pallavi Saxena
 site_description: >-
