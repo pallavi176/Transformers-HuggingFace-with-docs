@@ -12,6 +12,8 @@ nav:
     - Tokenizers: 2_3Tokenizers.md
     - HandlingMultipleSequences: 2_4HandlingMultipleSequences.md
     - PuttingAllTogether: 2_5PuttingAllTogether.md
+  - FineTuningPretrainedModel: 
+    - 3FineTuningPretrainedModel.md
 
 site_author: Pallavi Saxena
 site_description: >-
