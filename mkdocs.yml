@@ -7,13 +7,14 @@ nav:
   - Pipeline: 1tranformer-pipeline.md
   - UsingTransformer: 
     - 2UsingTransformerIntro.md
-    - BehindThe Pipeline: 2_1BehindPipeline.md
+    - Behind The Pipeline: 2_1BehindPipeline.md
     - Models: 2_2Models.md
     - Tokenizers: 2_3Tokenizers.md
-    - HandlingMultipleSequences: 2_4HandlingMultipleSequences.md
-    - PuttingAllTogether: 2_5PuttingAllTogether.md
+    - Handling Multiple Sequences: 2_4HandlingMultipleSequences.md
+    - Putting All Together: 2_5PuttingAllTogether.md
   - FineTuningPretrainedModel: 
     - 3FineTuningPretrainedModel.md
+    - Processing Data: 3_1ProcessingData.md
 
 site_author: Pallavi Saxena
 site_description: >-
