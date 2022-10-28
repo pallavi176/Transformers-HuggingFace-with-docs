@@ -1,0 +1,6 @@
+- We’ve explored 
+    - how tokenizers work and looked at tokenization, 
+    - conversion to input IDs, 
+    - padding, 
+    - truncation, 
+    - attention masks.
