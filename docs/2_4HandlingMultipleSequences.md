@@ -20,7 +20,7 @@ print(ids[1])
 #[1045, 5223, 2023, 1012]
 ```
 
-- You cant's build a tensor with lists of different lengths
+- You can't build a tensor with lists of different lengths
 
 ``` py
 import tensorflow as tf
@@ -29,6 +29,7 @@ ids = [[1045, 1005, 2310, 2042, 3403, 2005, 1037, 17662, 12172, 2607, 2026, 2878
 input_ids = tf.convert_to_tensor(ids) # Error: not a rectangualr shape
 ```
 
+- Generally, we only truncate sentences when they are longer than the maximum length the model can handle
 - Which is why we usually pad the smaller sentences to the length of the longest one!
 
 ``` py
@@ -42,7 +43,7 @@ input_ids
 ``` py
 from transformers import AutoTokenizer
 tokenizer = AutoTokenizer.from_pretrained(checkpoint)
-tokenizer.pad_token_id
+tokenizer.pad_token_id      # Applying padding here
 ```
 
 - Now that we have padded our sentences we can make a batch with them
@@ -81,6 +82,7 @@ all_ids = tf.convert_to_tensor(
     [[1045, 1005, 2310, 2042, 3403, 2005, 1037, 17662, 12172, 2607, 2026, 2878, 2166, 1012],
      [1045, 5223, 2023, 1012,    0,    0,    0,     0,     0,    0,    0,    0,    0,    0]]
 )
+# adding attention by creating attention mask
 attention_mask = tf.convert_to_tensor(
     [[   1,    1,    1,    1,    1,    1,    1,     1,     1,    1,    1,    1,    1,    1],
      [   1,    1,    1,    1,    0,    0,    0,     0,     0,    0,    0,    0,    0,    0]]
