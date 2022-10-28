@@ -1,29 +1,18 @@
-# Transformers-HuggingFace-with-docs
-Transformers-HuggingFace-with-docs
+# Transformer-Introduction
 
-## STEPS -
+- HuggingFace ecosystem
 
-### STEP 01- Create a repository by using template repository
+    * Transformers: https://github.com/huggingface/transformers
+    * Datasets: https://github.com/huggingface/datasets
+    * Tokenizers: https://github.com/huggingface/tokenizers
+    * Accelerate: https://github.com/huggingface/accelerate
+    * HuggingFace Hub: https://huggingface.co/models
 
-### STEP 02- Clone the new repository
 
-### STEP 03- Create a conda environment after opening the repository in VSCODE
+- Common NLP tasks
 
-```bash
-conda create --prefix ./env python=3.8 -y
-```
-
-```bash
-conda activate ./env
-```
-OR
-```bash
-source activate ./env
-```
-
-### STEP 04- install the requirements
-```bash
-pip install -r requirements.txt
-```
-
-### STEP 05- commit and push the changes to the remote repository
+    * Classifying whole sentences: sentiment analysis, spam classification, verify sentence grammer, logical relation between sentences
+    * Classifying each word in a sentence: NER, pos tag
+    * Generating text content: Text generation, fill in the blanks with masked words
+    * Extracting an answer from a text: QnA
+    * Generating a new sentence from an input text: NMT, text summarization

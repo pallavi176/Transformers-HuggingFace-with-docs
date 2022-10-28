@@ -3,8 +3,7 @@ site_name: Transformers-HuggingFace-with-docs
 
 # define TOC or order of website-
 nav:
-  - Home: index.md
-  - Introduction: 0transformer-intro.md
+  - Introduction: index.md
   - Pipeline: 1tranformer-pipeline.md
   - UsingTransformer: 
     - 2UsingTransformers.md
