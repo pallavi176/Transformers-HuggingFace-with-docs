@@ -6,7 +6,8 @@ nav:
   - Introduction: index.md
   - Pipeline: 1tranformer-pipeline.md
   - UsingTransformer: 
-    - 2UsingTransformers.md
+    - 2UsingTransformerIntro.md
+    - BehindThe Pipeline: 2_1BehindPipeline.md
     - Models: 2_2Models.md
     - Tokenizers: 2_3Tokenizers.md
     - HandlingMultipleSequences: 2_4HandlingMultipleSequences.md
